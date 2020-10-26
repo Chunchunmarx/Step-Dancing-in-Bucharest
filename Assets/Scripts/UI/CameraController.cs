@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject player;
+    public Player m_Player;
 
     private Vector3 offset;
     // Start is called before the first frame update
     void Start()
     {
-        offset = transform.position - player.transform.position;
+        offset = transform.position - m_Player.transform.position;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player.transform.position + offset;
+        transform.position = m_Player.transform.position + offset;
+    }
+
+    public void SetPlayerReference ( Player _player )
+    {
+        m_Player = _player;
     }
 }
