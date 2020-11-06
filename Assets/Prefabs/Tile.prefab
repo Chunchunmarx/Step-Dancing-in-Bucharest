@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89ca1b49b8cf904292bd11956e6414b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AboveTileObject: {fileID: 0}
+  m_TileID: 0
+  m_Transparency: 0.5
 --- !u!212 &6436481474388231872
 SpriteRenderer:
   m_ObjectHideFlags: 0

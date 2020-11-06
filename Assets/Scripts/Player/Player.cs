@@ -50,26 +50,22 @@ public class Player : AboveTileObject
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 m_MovementDirection = DIRECTION.Down;
-                Debug.Log("Grid Down from " + m_CurrentTile.m_TileID + " to " + m_CurrentTile.GetTile(DIRECTION.Down).m_TileID);
                 Moving(m_CurrentTile.GetTile(DIRECTION.Down));
             }
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 m_MovementDirection = DIRECTION.Up;
-                Debug.Log("Grid Up from " + m_CurrentTile.m_TileID + " to " + m_CurrentTile.GetTile(DIRECTION.Up).m_TileID);
                 Moving(m_CurrentTile.GetTile(DIRECTION.Up));
                 
             }
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 m_MovementDirection = DIRECTION.Left;
-                Debug.Log("Grid Left from " + m_CurrentTile.m_TileID + " to " + m_CurrentTile.GetTile(DIRECTION.Left).m_TileID);
                 Moving(m_CurrentTile.GetTile(DIRECTION.Left));
             }
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 m_MovementDirection = DIRECTION.Right;
-                Debug.Log("Grid Right from " + m_CurrentTile.m_TileID + " to " + m_CurrentTile.GetTile(DIRECTION.Right).m_TileID);
                 Moving(m_CurrentTile.GetTile(DIRECTION.Right));
             }
         }

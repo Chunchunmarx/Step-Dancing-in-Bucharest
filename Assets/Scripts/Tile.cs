@@ -12,6 +12,7 @@ public class Tile : MonoBehaviour
     public KeyValuePair<int, int> m_Coordinates;
     //bool m_IsSubscribedToBeat = false;
     public int m_TileID;
+    public float m_Transparency = 0.5f;
 
     void Awake()
     {
@@ -25,8 +26,6 @@ public class Tile : MonoBehaviour
 
     private void Update()
     {
-        if (m_AboveTileObject)
-            Debug.Log("Tile " + m_TileID + " has something above tile");
     }
 
     public void AddToTile(AboveTileObject _objectToAdd)
@@ -104,15 +103,4 @@ public class Tile : MonoBehaviour
     {
         return m_Coordinates.Value;
     }
-    /*
-    public void SetLayerNumber(int _number)
-    {
-        m_LayerNumber = (float)_number / 100;
-    }
-
-    public float GetLayerNumber()
-    {
-        return m_LayerNumber;
-    }
-    */
 }
